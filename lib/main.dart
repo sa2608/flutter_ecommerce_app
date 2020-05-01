@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 //my own imports from components
 import 'package:sanikumarsahani/components/horizontal_listview.dart';
+import 'package:sanikumarsahani/components/products.dart';
+
 
 void main(){
   runApp(
@@ -34,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
         dotSize: 4.0,   //the size of the dots
-        indicatorBgPadding: 8.0,  // horizontal indicator
+        indicatorBgPadding: 4.0,  // horizontal indicator
         showIndicator: true,
       ),
     ) ;
@@ -127,8 +129,18 @@ class _HomePageState extends State<HomePage> {
           //Padding Widget
           new Padding(padding: const EdgeInsets.all(8.0),
             child: new Text('Categories'),
+          ),
+          //Horizonatal list view starts here
+          HorizontalList(),
 
-            //Horizontal list view starts here
+          //padding widget
+          new Padding(padding: const EdgeInsets.all(8.0),
+          child: new Text('Recent Products'),
+          ),
+          //grid view
+          Container(
+            height: 320.0,
+            child: Products(),
           )
         ],
       ),
