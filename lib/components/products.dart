@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sanikumarsahani/pages/product_details.dart';
 
 class Products extends StatefulWidget {
   @override
@@ -14,61 +15,61 @@ class _ProductsState extends State<Products> {
       "price": 450,
     },
     {
-      "name": "Blazer",
+      "name": "Blazerr",
       "picture": "assets/images/products/blazer2.jpeg",
       "old_price": 600,
       "price": 550,
     },
     {
-      "name": "Blazer",
+      "name": "shirt",
       "picture": "assets/images/products/dress1.jpeg",
       "old_price": 50,
       "price": 45,
     },
     {
-      "name": "Blazer",
+      "name": "skirt",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "kurta",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "ghagra",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "choli",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "ganji",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "pantie",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "half pant",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
     },
     {
-      "name": "Blazer",
+      "name": "jeans pant",
       "picture": "assets/images/products/dress2.jpeg",
       "old_price": 5000,
       "price": 4500,
@@ -110,7 +111,15 @@ class Single_prod extends StatelessWidget {
       child: Hero(
         tag: prod_name,
         child: Material(
-        child: InkWell(onTap: (){},
+        child: InkWell(
+          onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+              //here we are passing the values of the product page to product details page
+              builder: (context)=>new ProductDetails(
+            product_detail_name: prod_name,
+            product_detail__new_price: prod_price,
+            product_detail_old_price: prod_old_price,
+            product_detail_picture: prod_picture,
+          ))),
           child: GridTile(
             footer: Container(
               color: Colors.white70,
