@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sanikumarsahani/main.dart';
+import 'package:sanikumarsahani/pages/main_screen.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_detail_name;
