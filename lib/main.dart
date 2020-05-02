@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = new Container(
-      height: 220.0,
+      height: 200.0,
       child: Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
         dotSize: 4.0,   //the size of the dots
         indicatorBgPadding: 4.0,  // horizontal indicator
         showIndicator: true,
+        dotBgColor: Colors.transparent,
       ),
     ) ;
     return Scaffold(
@@ -73,28 +74,28 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('Home Page'),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home,color: Colors.red,),
               ),
             ),
             InkWell(
               onTap: (){},
               child: ListTile(
                 title: Text('My Account'),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person,color: Colors.red,),
               ),
             ),
             InkWell(
               onTap: (){},
               child: ListTile(
                 title: Text('My Orders'),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket,color: Colors.red,),
               ),
             ),
             InkWell(
               onTap: (){},
               child: ListTile(
-                title: Text('My Categories'),
-                leading: Icon(Icons.dashboard),
+                title: Text('Shopping Cart'),
+                leading: Icon(Icons.shopping_cart,color: Colors.red,),
               ),
             ),
             InkWell(

@@ -29,51 +29,46 @@ class _ProductsState extends State<Products> {
     {
       "name": "skirt",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 567,
+      "price": 666,
     },
     {
       "name": "kurta",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 676,
+      "price": 999,
     },
     {
       "name": "ghagra",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 300,
+      "price": 200,
     },
     {
       "name": "choli",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 900,
+      "price": 100,
     },
     {
       "name": "ganji",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 123,
+      "price": 100,
     },
     {
       "name": "pantie",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 999,
+      "price": 666,
     },
     {
       "name": "half pant",
       "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
+      "old_price": 999,
+      "price": 222,
     },
-    {
-      "name": "jeans pant",
-      "picture": "assets/images/products/dress2.jpeg",
-      "old_price": 5000,
-      "price": 4500,
-    },
+
   ];
 
   @override
@@ -109,6 +104,7 @@ class Single_prod extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Hero(
+//        tag:new Text("A"),  //if multiple hero error occurs
         tag: prod_name,
         child: Material(
         child: InkWell(
@@ -123,23 +119,12 @@ class Single_prod extends StatelessWidget {
           child: GridTile(
             footer: Container(
               color: Colors.white70,
-              child: ListTile(
-                leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),
+              child: new Row(children: <Widget>[
+                Expanded(
+                  child: Text(prod_name, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16.0),),
                 ),
-                title: Text(
-                  "\$$prod_price",
-                  style: TextStyle(
-                      color: Colors.redAccent,
-                      fontWeight: FontWeight.w800),
-                ),
-                subtitle: Text(
-                  "\$$prod_old_price",
-                  style: TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w800,
-                  decoration: TextDecoration.lineThrough),
-                ),
-                )
+                new Text("\$${prod_price }",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),)
+              ],)
               ) ,
             child: Image.asset(prod_picture,
             fit:BoxFit.cover,)),
