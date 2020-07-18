@@ -1,6 +1,6 @@
 # sanikumarsahani
 
-this is a brand new flutter ecommerce application
+this is a  flutter ecommerce application
 
 ## Getting Started
 
